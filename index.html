@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tamil Selvan M — Laravel &amp; Full Stack Developer</title>
+<meta name="description" content="Portfolio of Tamil Selvan M, Laravel &amp; Full Stack Developer specializing in CRM systems, PHP, and cloud hosting." />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Fallback for Clash Display (not on Google Fonts) -->
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+
+<!-- ===================== PAGE LOADER ===================== -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <span class="loader-mark">TS</span>
+    <div class="loader-bar"><div class="loader-bar-fill" id="loaderFill"></div></div>
+  </div>
+</div>
+
+<!-- ===================== NOISE OVERLAY ===================== -->
+<div class="noise-overlay"></div>
+
+<!-- ===================== CUSTOM CURSOR ===================== -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===================== SCROLL PROGRESS ===================== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===================== BACKGROUND LAYERS ===================== -->
+<div class="bg-fixed">
+  <div class="bg-grid"></div>
+  <div class="aurora aurora-1"></div>
+  <div class="aurora aurora-2"></div>
+  <div class="aurora aurora-3"></div>
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <canvas id="particles"></canvas>
+</div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="logo">TSM<span class="dot">.</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#services" class="nav-link" data-section="services">Services</a>
+      <a href="#certifications" class="nav-link" data-section="certifications">Certs</a>
+      <a href="#education" class="nav-link" data-section="education">Education</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#skills" class="mobile-link">Skills</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#certifications" class="mobile-link">Certs</a>
+  <a href="#education" class="mobile-link">Education</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<main>
+
+<!-- ===================== 1. HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow reveal" data-reveal>
+      <span class="pulse-dot"></span> Available for freelance &amp; full-time roles
+    </p>
+
+    <h1 class="hero-name reveal" data-reveal>
+      <span class="line">Tamil Selvan M</span>
+    </h1>
+
+    <div class="hero-role reveal" data-reveal>
+      <span class="role-prefix">I build for the</span>
+      <span class="typed-wrap">&nbsp;<span id="typed"></span><span class="type-cursor">|</span></span>
+    </div>
+
+    <p class="hero-desc reveal" data-reveal>
+      Laravel developer crafting CRM systems, APIs and admin platforms that
+      businesses actually run on — from database to DNS.
+    </p>
+
+    <div class="hero-actions reveal" data-reveal>
+      <a href="#" class="btn btn-primary magnetic" data-magnetic>
+        <span>Download Resume</span> <i class="fa-solid fa-arrow-down"></i>
+      </a>
+      <a href="#projects" class="btn btn-ghost magnetic" data-magnetic>
+        <span>View Projects</span> <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="hero-socials reveal" data-reveal>
+      <a href="https://github.com/" target="_blank" rel="noopener" class="social-icon magnetic" data-magnetic aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-icon magnetic" data-magnetic aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:tamilselvan@example.com" class="social-icon magnetic" data-magnetic aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <div class="hero-orbit" aria-hidden="true">
+    <div class="orbit-ring ring-1"></div>
+    <div class="orbit-ring ring-2"></div>
+    <div class="orbit-ring ring-3"></div>
+    <div class="orbit-core">
+      <div class="core-glass"></div>
+      <i class="fa-brands fa-laravel orbit-icon icon-1"></i>
+      <i class="fa-brands fa-php orbit-icon icon-2"></i>
+      <i class="fa-solid fa-database orbit-icon icon-3"></i>
+      <i class="fa-brands fa-vuejs orbit-icon icon-4"></i>
+      <i class="fa-solid fa-server orbit-icon icon-5"></i>
+      <i class="fa-brands fa-git-alt orbit-icon icon-6"></i>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+    <span class="scroll-label">Scroll</span>
+  </a>
+</section>
+
+<!-- ===================== 2. ABOUT ===================== -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal" data-reveal>
+      <div class="tilt-card photo-card" data-tilt>
+        <div class="glow-border"></div>
+        <div class="photo-placeholder">
+          <i class="fa-solid fa-user-astronaut"></i>
+        </div>
+        <div class="photo-badge">
+          <i class="fa-solid fa-code"></i> 3+ yrs building CRMs
+        </div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p class="eyebrow reveal" data-reveal>01 — About</p>
+      <h2 class="section-title reveal" data-reveal>Hello!</h2>
+      <div class="glass-card about-card reveal" data-reveal>
+        <p>I'm <strong>Tamil Selvan</strong>, a passionate Full Stack Web Developer from Tamil Nadu, India.</p>
+        <p>I specialize in <strong>Laravel, PHP, CRM Development, Server Management, WordPress, CodeIgniter, Shopify, JavaScript, MySQL, REST APIs</strong>, and <strong>Cloud Hosting</strong>.</p>
+        <p>I enjoy building scalable business applications, automation systems, and user-friendly web experiences.</p>
+        <p>Currently, I am expanding my expertise into <strong>React, AI-powered applications</strong>, and modern frontend development.</p>
+        <p>I love solving complex technical challenges and continuously learning new technologies.</p>
+      </div>
+
+      <div class="about-stats reveal" data-reveal>
+        <div class="stat">
+          <span class="stat-num" data-count="15">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects Shipped</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3. SKILLS ===================== -->
+<section class="section" id="skills">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal>02 — Skills</p>
+    <h2 class="section-title reveal" data-reveal>What I work with</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-group glass-card reveal" data-reveal>
+        <h3><i class="fa-solid fa-code"></i> Languages</h3>
+        <div class="chip-row">
+          <span class="chip"><i class="fa-brands fa-html5"></i> HTML</span>
+          <span class="chip"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+          <span class="chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="chip"><i class="fa-brands fa-php"></i> PHP</span>
+          <span class="chip"><i class="fa-solid fa-database"></i> SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group glass-card reveal" data-reveal>
+        <h3><i class="fa-solid fa-layer-group"></i> Frameworks</h3>
+        <div class="chip-row">
+          <span class="chip"><i class="fa-brands fa-laravel"></i> Laravel</span>
+          <span class="chip">CodeIgniter</span>
+          <span class="chip"><i class="fa-brands fa-wordpress"></i> WordPress</span>
+          <span class="chip"><i class="fa-brands fa-shopify"></i> Shopify</span>
+        </div>
+      </div>
+
+      <div class="skill-group glass-card reveal" data-reveal>
+        <h3><i class="fa-solid fa-plug"></i> Libraries &amp; APIs</h3>
+        <div class="chip-row">
+          <span class="chip">jQuery</span>
+          <span class="chip">AJAX</span>
+          <span class="chip">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="skill-group glass-card reveal" data-reveal>
+        <h3><i class="fa-solid fa-database"></i> Databases</h3>
+        <div class="chip-row">
+          <span class="chip">MySQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group glass-card reveal" data-reveal>
+        <h3><i class="fa-solid fa-toolbox"></i> Tools &amp; Hosting</h3>
+        <div class="chip-row">
+          <span class="chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span class="chip"><i class="fa-brands fa-github"></i> GitHub</span>
+          <span class="chip">VS Code</span>
+          <span class="chip">XAMPP</span>
+          <span class="chip"><i class="fa-brands fa-composer"></i> Composer</span>
+          <span class="chip">CyberPanel</span>
+          <span class="chip">Webuzo</span>
+          <span class="chip">DNS</span>
+          <span class="chip">Hosting</span>
+        </div>
+      </div>
+
+      <div class="skill-group glass-card reveal" data-reveal>
+        <h3><i class="fa-solid fa-robot"></i> AI Tools</h3>
+        <div class="chip-row">
+          <span class="chip">ChatGPT</span>
+          <span class="chip">Claude</span>
+          <span class="chip">GitHub Copilot</span>
+          <span class="chip">Gemini</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 4. EXPERIENCE ===================== -->
+<section class="section" id="experience">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal>03 — Experience</p>
+    <h2 class="section-title reveal" data-reveal>Where I've worked</h2>
+
+    <div class="timeline">
+      <div class="timeline-item reveal" data-reveal>
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-card">
+          <div class="timeline-head">
+            <h3>Web Developer</h3>
+            <span class="timeline-company">Nakoa Technologies</span>
+          </div>
+          <ul class="timeline-list">
+            <li>Developed CRM systems</li>
+            <li>Laravel Applications</li>
+            <li>REST APIs</li>
+            <li>Database Design</li>
+            <li>Role Management</li>
+            <li>Hosting, DNS &amp; Email Configuration</li>
+            <li>Bug Fixing &amp; Deployment</li>
+            <li>Performance Optimization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5. PROJECTS ===================== -->
+<section class="section" id="projects">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal>04 — Projects</p>
+    <h2 class="section-title reveal" data-reveal>Selected work</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card tilt-card glass-card reveal" data-reveal data-tilt>
+        <div class="glow-border"></div>
+        <div class="project-image"><i class="fa-solid fa-address-book"></i></div>
+        <div class="project-body">
+          <h3>PiggyCRM</h3>
+          <p>Laravel CRM with role based access, lead management, contact management and WhatsApp integration.</p>
+          <div class="badge-row">
+            <span class="badge">Laravel</span><span class="badge">RBAC</span><span class="badge">WhatsApp API</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="link-btn"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card tilt-card glass-card reveal" data-reveal data-tilt>
+        <div class="glow-border"></div>
+        <div class="project-image"><i class="fa-solid fa-bullhorn"></i></div>
+        <div class="project-body">
+          <h3>LeadsNG</h3>
+          <p>Marketing automation platform for campaign management, bulk messaging and lead sync.</p>
+          <div class="badge-row">
+            <span class="badge">Automation</span><span class="badge">Campaigns</span><span class="badge">WhatsApp</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="link-btn"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card tilt-card glass-card reveal" data-reveal data-tilt>
+        <div class="glow-border"></div>
+        <div class="project-image"><i class="fa-solid fa-couch"></i></div>
+        <div class="project-body">
+          <h3>Interior CRM</h3>
+          <p>Library module with a floor-data import system, cost estimation and material management.</p>
+          <div class="badge-row">
+            <span class="badge">Laravel</span><span class="badge">Blade</span><span class="badge">Vue 3</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="link-btn"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card tilt-card glass-card reveal" data-reveal data-tilt>
+        <div class="glow-border"></div>
+        <div class="project-image"><i class="fa-solid fa-image"></i></div>
+        <div class="project-body">
+          <h3>Funeral Management System</h3>
+          <p>Poster generator with template management and multi-language support.</p>
+          <div class="badge-row">
+            <span class="badge">PHP</span><span class="badge">Templating</span><span class="badge">i18n</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="link-btn"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card tilt-card glass-card reveal" data-reveal data-tilt>
+        <div class="glow-border"></div>
+        <div class="project-image"><i class="fa-brands fa-shopify"></i></div>
+        <div class="project-body">
+          <h3>MaxPro Shopify Store</h3>
+          <p>Custom Shopify theme with tailored product management and a fully responsive design.</p>
+          <div class="badge-row">
+            <span class="badge">Shopify</span><span class="badge">Liquid</span><span class="badge">Responsive</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#" class="link-btn"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 6. SERVICES ===================== -->
+<section class="section" id="services">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal>05 — Services</p>
+    <h2 class="section-title reveal" data-reveal>How I can help</h2>
+
+    <div class="services-grid">
+      <div class="service-card glass-card reveal" data-reveal><i class="fa-brands fa-laravel"></i><h3>Laravel Development</h3></div>
+      <div class="service-card glass-card reveal" data-reveal><i class="fa-solid fa-users-gear"></i><h3>CRM Development</h3></div>
+      <div class="service-card glass-card reveal" data-reveal><i class="fa-solid fa-globe"></i><h3>Website Development</h3></div>
+      <div class="service-card glass-card reveal" data-reveal><i class="fa-solid fa-plug-circle-bolt"></i><h3>API Integration</h3></div>
+      <div class="service-card glass-card reveal" data-reveal><i class="fa-solid fa-server"></i><h3>Server Setup</h3></div>
+      <div class="service-card glass-card reveal" data-reveal><i class="fa-solid fa-cloud"></i><h3>Cloud Hosting</h3></div>
+      <div class="service-card glass-card reveal" data-reveal><i class="fa-brands fa-wordpress"></i><h3>WordPress</h3></div>
+      <div class="service-card glass-card reveal" data-reveal><i class="fa-solid fa-gauge-high"></i><h3>Performance Optimization</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. CERTIFICATIONS ===================== -->
+<section class="section" id="certifications">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal>06 — Certifications</p>
+    <h2 class="section-title reveal" data-reveal>Certified &amp; credentialed</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card glass-card reveal" data-reveal>
+        <i class="fa-brands fa-microsoft"></i>
+        <h3>Microsoft Azure AI Fundamentals</h3>
+        <span class="cert-tag">Microsoft</span>
+      </div>
+      <div class="cert-card glass-card reveal" data-reveal>
+        <i class="fa-solid fa-language"></i>
+        <h3>EF SET English Certificate</h3>
+        <span class="cert-tag">EF Education First</span>
+      </div>
+      <div class="cert-card glass-card reveal" data-reveal>
+        <i class="fa-solid fa-code"></i>
+        <h3>Full Stack Web Development</h3>
+        <span class="cert-tag">Certification</span>
+      </div>
+      <div class="cert-card glass-card reveal" data-reveal>
+        <i class="fa-solid fa-award"></i>
+        <h3>Web Development Certification</h3>
+        <span class="cert-tag">Certification</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 8. EDUCATION ===================== -->
+<section class="section" id="education">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal>07 — Education</p>
+    <h2 class="section-title reveal" data-reveal>Academic background</h2>
+
+    <div class="glass-card education-card reveal" data-reveal>
+      <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="edu-content">
+        <h3>B.Tech, Information Technology</h3>
+        <p class="edu-school">Hindusthan Institute of Technology</p>
+        <p class="edu-years">2018 — 2022</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 9. CONTACT ===================== -->
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal" data-reveal>
+      <p class="eyebrow">08 — Contact</p>
+      <h2 class="section-title">Let's build something</h2>
+      <p class="contact-text">Have a project in mind, or just want to talk shop about Laravel and CRMs? My inbox is open.</p>
+
+      <div class="contact-detail"><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</div>
+      <div class="contact-detail"><i class="fa-solid fa-envelope"></i> tamilselvan@example.com</div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/" target="_blank" rel="noopener" class="social-icon magnetic" data-magnetic aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-icon magnetic" data-magnetic aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:tamilselvan@example.com" class="social-icon magnetic" data-magnetic aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <form class="glass-card contact-form reveal" data-reveal id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="name" name="name" required placeholder=" ">
+          <label for="name">Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" required placeholder=" ">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" required placeholder=" ">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+        <label for="message">Message</label>
+      </div>
+      <button type="submit" class="btn btn-primary magnetic" data-magnetic>
+        <span id="submitLabel">Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+      </button>
+      <p class="form-note" id="formNote" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== 10. FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#hero" class="logo">TSM<span class="dot">.</span></a>
+    <p class="footer-copy">© <span id="year"></span> Tamil Selvan M. Crafted with care in Tamil Nadu.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+</footer>
+
+<!-- Section active indicator -->
+<div class="section-indicator" id="sectionIndicator"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
